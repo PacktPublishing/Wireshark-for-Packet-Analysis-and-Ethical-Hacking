@@ -1,0 +1,19 @@
+Python 3 live:
+==============
+import pyshark
+cap = pyshark.FileCapture(‘tshark1.pcap')
+cap
+print(cap[0])
+dir(cap[0])
+cap[0].show()
+cap[1].show()
+cap[2].show()
+cap[0].layers
+cap[1].layers
+cap[1].ip
+print(cap[1].ip)
+print(cap[1].eigrp)
+dir(cap[1].eigrp)
+print(cap[1].eigrp.AA)
+print(cap[1].eigrp.par_k1)
+

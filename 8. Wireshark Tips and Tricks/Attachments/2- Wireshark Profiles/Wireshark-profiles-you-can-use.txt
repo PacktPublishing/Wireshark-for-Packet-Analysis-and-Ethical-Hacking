@@ -1,0 +1,7 @@
+My friend Jeff Carell told me about this website that has a lot of Wireshark profiles.
+
+Jeff and others have created some cool Wireshark profiles to make it easier to find information.
+
+https://www.cellstream.com/resources/wireshark-profiles-repository
+
+Please note that I have no affiliation with this website and you use these at your own risk. Follow their advice: "You should unzip a zipped profile and make sure it only contains TXT files."

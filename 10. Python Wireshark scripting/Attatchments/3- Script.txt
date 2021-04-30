@@ -1,0 +1,43 @@
+Installation:
+==============
+apt-get update
+apt-get install tshark
+apt-get install python3.5
+apt-get install python-pip3
+pip3 install pyshark
+
+Python 3 live:
+==============
+import pyshark
+cap = pyshark.FileCapture(‘tshark1.pcap')
+cap
+print(cap[0])
+dir(cap[0])
+cap[0].show()
+cap[1].show()
+cap[2].show()
+cap[0].layers
+cap[1].layers
+cap[1].ip
+print(cap[1].ip)
+print(cap[1].eigrp)
+dir(cap[1].eigrp)
+print(cap[1].eigrp.AA)
+print(cap[1].eigrp.par_k1)
+
+
+Script:
+============================================
+
+import pyshark
+capture = pyshark.LiveCapture(interface='eth0')
+for packet in capture.sniff_continuously(packet_count=50):
+    myfile = open('pyshark1.txt','w')
+    myfile.write(str(packet))
+    try:
+        print('Source = ' + packet['ip'].src)
+        print('Destination = ' + packet['ip'].dst)
+    except:
+        pass
+print ('The end')
+exit()
